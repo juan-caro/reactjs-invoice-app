@@ -20,7 +20,7 @@ export const invoice = {
             id: 1,
             product: 'Cpu Intel i7',
             price: 499,
-            quantity: 1,
+            quantity: 2,
         },
         {
             id: 2,
