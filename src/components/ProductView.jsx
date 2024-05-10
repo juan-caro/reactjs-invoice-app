@@ -1,7 +1,7 @@
 import { RowItemView } from "./RowItemView";
 import PropTypes from 'prop-types'
 
-export const ProductView = ({items}) => {
+export const ProductView = ({items, handlerDeleteItem}) => {
 
     return(
         <>
@@ -17,7 +17,13 @@ export const ProductView = ({items}) => {
                 <tbody>
                     {items.map(({id, product, price, quantity}) => {
                         return (
-                            <RowItemView key={id} product={product} price={price} quantity={quantity}/>
+                            <RowItemView 
+                                key={id}
+                                id={id}
+                                product={product} 
+                                price={price} 
+                                quantity={quantity} 
+                                handlerDeleteItem={ id => handlerDeleteItem(id) }/>
                         );
                     })}
                     
